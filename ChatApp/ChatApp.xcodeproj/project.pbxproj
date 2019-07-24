@@ -3,18 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DBFBE3F1EAF8A396C7351C7 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFD9C3C58EAF58F6433DA27 /* Pods_ChatApp.framework */; };
 		9A727F2F22E08EB3005D38E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A727F2E22E08EB3005D38E6 /* AppDelegate.swift */; };
 		9A727F3422E08EB3005D38E6 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A727F3222E08EB3005D38E6 /* Auth.storyboard */; };
 		9A727F3622E08EB5005D38E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A727F3522E08EB5005D38E6 /* Assets.xcassets */; };
 		9A727F3922E08EB5005D38E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A727F3722E08EB5005D38E6 /* LaunchScreen.storyboard */; };
 		9A727F4122E0AD25005D38E6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A727F4022E0AD25005D38E6 /* Chat.storyboard */; };
+		9A8B178322E85F070084E24A /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B178222E85F070084E24A /* MessagesVC.swift */; };
+		9A8B178522E860550084E24A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B178422E860550084E24A /* User.swift */; };
+		9AEFA0BE22E60C3F007F6EBB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFA0BD22E60C3F007F6EBB /* StringExtension.swift */; };
+		9AF881DB22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881CC22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf */; };
+		9AF881DC22E4B23800E1F1EE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881CD22E4B23800E1F1EE /* Nunito-ExtraBold.ttf */; };
+		9AF881DD22E4B23800E1F1EE /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881CE22E4B23800E1F1EE /* Nunito-ExtraLightItalic.ttf */; };
+		9AF881DE22E4B23800E1F1EE /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881CF22E4B23800E1F1EE /* Nunito-Light.ttf */; };
+		9AF881DF22E4B23800E1F1EE /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D022E4B23800E1F1EE /* Nunito-Regular.ttf */; };
+		9AF881E022E4B23800E1F1EE /* Nunito-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D122E4B23800E1F1EE /* Nunito-RegularItalic.ttf */; };
+		9AF881E122E4B23800E1F1EE /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D222E4B23800E1F1EE /* Nunito-SemiBold.ttf */; };
+		9AF881E222E4B23800E1F1EE /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D322E4B23800E1F1EE /* Nunito-Bold.ttf */; };
+		9AF881E322E4B23800E1F1EE /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D422E4B23800E1F1EE /* Nunito-BoldItalic.ttf */; };
+		9AF881E422E4B23800E1F1EE /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D522E4B23800E1F1EE /* Nunito-Black.ttf */; };
+		9AF881E522E4B23800E1F1EE /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D622E4B23800E1F1EE /* Nunito-ExtraLight.ttf */; };
+		9AF881E622E4B23800E1F1EE /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D722E4B23800E1F1EE /* Nunito-SemiBoldItalic.ttf */; };
+		9AF881E722E4B23800E1F1EE /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D822E4B23800E1F1EE /* Nunito-BlackItalic.ttf */; };
+		9AF881E822E4B23800E1F1EE /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881D922E4B23800E1F1EE /* OFL.txt */; };
+		9AF881E922E4B23800E1F1EE /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881DA22E4B23800E1F1EE /* Nunito-LightItalic.ttf */; };
+		9AF881EF22E4B70D00E1F1EE /* AuthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF881EA22E4B70C00E1F1EE /* AuthTableViewController.swift */; };
+		9AF881F022E4B70D00E1F1EE /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF881EB22E4B70C00E1F1EE /* RoundedButton.swift */; };
+		9AF881F122E4B70D00E1F1EE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF881EC22E4B70C00E1F1EE /* SignInVC.swift */; };
+		9AF881F222E4B70D00E1F1EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881ED22E4B70C00E1F1EE /* GoogleService-Info.plist */; };
+		9AF881F322E4B70D00E1F1EE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF881EE22E4B70C00E1F1EE /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CE94EADC06022B4A5F3AC8D /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9A727F2B22E08EB3005D38E6 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A727F2E22E08EB3005D38E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A727F3322E08EB3005D38E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -22,6 +47,31 @@
 		9A727F3822E08EB5005D38E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A727F3A22E08EB5005D38E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A727F4022E0AD25005D38E6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		9A8B178222E85F070084E24A /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
+		9A8B178422E860550084E24A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9AEFA0BD22E60C3F007F6EBB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9AF881CC22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		9AF881CD22E4B23800E1F1EE /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9AF881CE22E4B23800E1F1EE /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		9AF881CF22E4B23800E1F1EE /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		9AF881D022E4B23800E1F1EE /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		9AF881D122E4B23800E1F1EE /* Nunito-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-RegularItalic.ttf"; sourceTree = "<group>"; };
+		9AF881D222E4B23800E1F1EE /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		9AF881D322E4B23800E1F1EE /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		9AF881D422E4B23800E1F1EE /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9AF881D522E4B23800E1F1EE /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		9AF881D622E4B23800E1F1EE /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9AF881D722E4B23800E1F1EE /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		9AF881D822E4B23800E1F1EE /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9AF881D922E4B23800E1F1EE /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		9AF881DA22E4B23800E1F1EE /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		9AF881EA22E4B70C00E1F1EE /* AuthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTableViewController.swift; sourceTree = "<group>"; };
+		9AF881EB22E4B70C00E1F1EE /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		9AF881EC22E4B70C00E1F1EE /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		9AF881ED22E4B70C00E1F1EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9AF881EE22E4B70C00E1F1EE /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		AEFD9C3C58EAF58F6433DA27 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71A99B7371757E88C6D46DD /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +79,127 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DBFBE3F1EAF8A396C7351C7 /* Pods_ChatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A4DD1B322E88E93005E27B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A727F3522E08EB5005D38E6 /* Assets.xcassets */,
+				9A727F3A22E08EB5005D38E6 /* Info.plist */,
+				9AF881ED22E4B70C00E1F1EE /* GoogleService-Info.plist */,
+				9A727F3722E08EB5005D38E6 /* LaunchScreen.storyboard */,
+				9AF881CB22E4B23800E1F1EE /* Nunito */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A4DD1B422E88EB6005E27B9 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				9A4DD1BB22E89006005E27B9 /* Model */,
+				9A4DD1BC22E8901F005E27B9 /* View */,
+				9A4DD1BD22E89044005E27B9 /* Controller */,
+				9A4DD1BE22E89052005E27B9 /* Extensions */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		9A4DD1B522E88EC3005E27B9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9A4DD1B822E88FBF005E27B9 /* View */,
+				9A4DD1B722E88FA1005E27B9 /* Controller */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9A4DD1B622E88ED9005E27B9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				9A4DD1BA22E88FE9005E27B9 /* View */,
+				9A4DD1B922E88FDA005E27B9 /* Controller */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		9A4DD1B722E88FA1005E27B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9AF881EA22E4B70C00E1F1EE /* AuthTableViewController.swift */,
+				9AF881EC22E4B70C00E1F1EE /* SignInVC.swift */,
+				9AF881EE22E4B70C00E1F1EE /* SignUpVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A4DD1B822E88FBF005E27B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A727F3222E08EB3005D38E6 /* Auth.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A4DD1B922E88FDA005E27B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A8B178222E85F070084E24A /* MessagesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A4DD1BA22E88FE9005E27B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A727F4022E0AD25005D38E6 /* Chat.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A4DD1BB22E89006005E27B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A8B178422E860550084E24A /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A4DD1BC22E8901F005E27B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AF881EB22E4B70C00E1F1EE /* RoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A4DD1BD22E89044005E27B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A727F2E22E08EB3005D38E6 /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A4DD1BE22E89052005E27B9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9AEFA0BD22E60C3F007F6EBB /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9A727F2222E08EB3005D38E6 = {
 			isa = PBXGroup;
 			children = (
 				9A727F2D22E08EB3005D38E6 /* ChatApp */,
 				9A727F2C22E08EB3005D38E6 /* Products */,
+				C67B72983322B685E4D1087B /* Pods */,
+				C55D412BBB4F117D1CFB1B5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +214,51 @@
 		9A727F2D22E08EB3005D38E6 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				9A727F2E22E08EB3005D38E6 /* AppDelegate.swift */,
-				9A727F3222E08EB3005D38E6 /* Auth.storyboard */,
-				9A727F4022E0AD25005D38E6 /* Chat.storyboard */,
-				9A727F3522E08EB5005D38E6 /* Assets.xcassets */,
-				9A727F3722E08EB5005D38E6 /* LaunchScreen.storyboard */,
-				9A727F3A22E08EB5005D38E6 /* Info.plist */,
+				9A4DD1B322E88E93005E27B9 /* Supporting Files */,
+				9A4DD1B422E88EB6005E27B9 /* Global */,
+				9A4DD1B522E88EC3005E27B9 /* Auth */,
+				9A4DD1B622E88ED9005E27B9 /* Chat */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		9AF881CB22E4B23800E1F1EE /* Nunito */ = {
+			isa = PBXGroup;
+			children = (
+				9AF881CC22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf */,
+				9AF881CD22E4B23800E1F1EE /* Nunito-ExtraBold.ttf */,
+				9AF881CE22E4B23800E1F1EE /* Nunito-ExtraLightItalic.ttf */,
+				9AF881CF22E4B23800E1F1EE /* Nunito-Light.ttf */,
+				9AF881D022E4B23800E1F1EE /* Nunito-Regular.ttf */,
+				9AF881D122E4B23800E1F1EE /* Nunito-RegularItalic.ttf */,
+				9AF881D222E4B23800E1F1EE /* Nunito-SemiBold.ttf */,
+				9AF881D322E4B23800E1F1EE /* Nunito-Bold.ttf */,
+				9AF881D422E4B23800E1F1EE /* Nunito-BoldItalic.ttf */,
+				9AF881D522E4B23800E1F1EE /* Nunito-Black.ttf */,
+				9AF881D622E4B23800E1F1EE /* Nunito-ExtraLight.ttf */,
+				9AF881D722E4B23800E1F1EE /* Nunito-SemiBoldItalic.ttf */,
+				9AF881D822E4B23800E1F1EE /* Nunito-BlackItalic.ttf */,
+				9AF881D922E4B23800E1F1EE /* OFL.txt */,
+				9AF881DA22E4B23800E1F1EE /* Nunito-LightItalic.ttf */,
+			);
+			path = Nunito;
+			sourceTree = "<group>";
+		};
+		C55D412BBB4F117D1CFB1B5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEFD9C3C58EAF58F6433DA27 /* Pods_ChatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C67B72983322B685E4D1087B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CE94EADC06022B4A5F3AC8D /* Pods-ChatApp.debug.xcconfig */,
+				C71A99B7371757E88C6D46DD /* Pods-ChatApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A727F3D22E08EB5005D38E6 /* Build configuration list for PBXNativeTarget "ChatApp" */;
 			buildPhases = (
+				D2281648C4CEE347182E9B54 /* [CP] Check Pods Manifest.lock */,
 				9A727F2722E08EB3005D38E6 /* Sources */,
 				9A727F2822E08EB3005D38E6 /* Frameworks */,
 				9A727F2922E08EB3005D38E6 /* Resources */,
+				949CB10C3E5A0AAEC955268B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,14 +321,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF881E022E4B23800E1F1EE /* Nunito-RegularItalic.ttf in Resources */,
+				9AF881E422E4B23800E1F1EE /* Nunito-Black.ttf in Resources */,
+				9AF881DD22E4B23800E1F1EE /* Nunito-ExtraLightItalic.ttf in Resources */,
 				9A727F3922E08EB5005D38E6 /* LaunchScreen.storyboard in Resources */,
+				9AF881E622E4B23800E1F1EE /* Nunito-SemiBoldItalic.ttf in Resources */,
+				9AF881DB22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				9A727F3622E08EB5005D38E6 /* Assets.xcassets in Resources */,
+				9AF881E122E4B23800E1F1EE /* Nunito-SemiBold.ttf in Resources */,
+				9AF881DC22E4B23800E1F1EE /* Nunito-ExtraBold.ttf in Resources */,
 				9A727F4122E0AD25005D38E6 /* Chat.storyboard in Resources */,
+				9AF881E522E4B23800E1F1EE /* Nunito-ExtraLight.ttf in Resources */,
+				9AF881DF22E4B23800E1F1EE /* Nunito-Regular.ttf in Resources */,
+				9AF881E822E4B23800E1F1EE /* OFL.txt in Resources */,
+				9AF881E722E4B23800E1F1EE /* Nunito-BlackItalic.ttf in Resources */,
+				9AF881DE22E4B23800E1F1EE /* Nunito-Light.ttf in Resources */,
+				9AF881E222E4B23800E1F1EE /* Nunito-Bold.ttf in Resources */,
 				9A727F3422E08EB3005D38E6 /* Auth.storyboard in Resources */,
+				9AF881F222E4B70D00E1F1EE /* GoogleService-Info.plist in Resources */,
+				9AF881E922E4B23800E1F1EE /* Nunito-LightItalic.ttf in Resources */,
+				9AF881E322E4B23800E1F1EE /* Nunito-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		949CB10C3E5A0AAEC955268B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2281648C4CEE347182E9B54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9A727F2722E08EB3005D38E6 /* Sources */ = {
@@ -137,6 +394,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A727F2F22E08EB3005D38E6 /* AppDelegate.swift in Sources */,
+				9AF881F022E4B70D00E1F1EE /* RoundedButton.swift in Sources */,
+				9AEFA0BE22E60C3F007F6EBB /* StringExtension.swift in Sources */,
+				9AF881F122E4B70D00E1F1EE /* SignInVC.swift in Sources */,
+				9A8B178522E860550084E24A /* User.swift in Sources */,
+				9AF881F322E4B70D00E1F1EE /* SignUpVC.swift in Sources */,
+				9AF881EF22E4B70D00E1F1EE /* AuthTableViewController.swift in Sources */,
+				9A8B178322E85F070084E24A /* MessagesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +544,7 @@
 		};
 		9A727F3E22E08EB5005D38E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE94EADC06022B4A5F3AC8D /* Pods-ChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -288,7 +553,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BF.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BF.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,6 +562,7 @@
 		};
 		9A727F3F22E08EB5005D38E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C71A99B7371757E88C6D46DD /* Pods-ChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BF.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BF.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

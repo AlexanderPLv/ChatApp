@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aah-J9-KXY">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Messages-->
+        <scene sceneID="bBF-Rj-V8c">
+            <objects>
+                <viewController id="Dzl-2P-BfP" customClass="MessagesVC" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k6Q-eU-OPe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWQ-zl-egk">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U8o-Uz-dn1">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="50"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3z3-Ec-y0Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-YR-S6s">
+                                                <rect key="frame" x="342" y="0.0" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="bYQ-7C-7K4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Send">
+                                                    <color key="titleColor" red="0.83149820569999999" green="0.58695864679999998" blue="0.99995809790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81685572862625122" green="0.82795262336730957" blue="0.8485448956489563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="U8o-Uz-dn1" secondAttribute="bottom" id="Ive-Dl-nh6"/>
+                                    <constraint firstAttribute="trailing" secondItem="U8o-Uz-dn1" secondAttribute="trailing" constant="16" id="XyD-7w-Anx"/>
+                                    <constraint firstAttribute="height" constant="50" id="Z7d-f2-pig"/>
+                                    <constraint firstItem="U8o-Uz-dn1" firstAttribute="top" secondItem="EWQ-zl-egk" secondAttribute="top" id="axX-Og-nYC"/>
+                                    <constraint firstItem="U8o-Uz-dn1" firstAttribute="leading" secondItem="EWQ-zl-egk" secondAttribute="leading" constant="16" id="hkY-Fv-6ZL"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Em8-aD-GUv">
+                                <rect key="frame" x="0.0" y="141.5" width="414" height="670.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" rowHeight="133" id="6P7-wL-60e">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="133"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6P7-wL-60e" id="Ihr-jM-zyh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="132.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EKY-W9-c18">
+                                                    <rect key="frame" x="20" y="11" width="374" height="111"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ds4-1Z-IJU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="17" id="VJB-77-eLC"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO5-tX-5z4">
+                                                            <rect key="frame" x="0.0" y="25" width="115" height="86"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EKY-W9-c18" secondAttribute="bottom" id="7nf-ar-0Yu"/>
+                                                <constraint firstItem="EKY-W9-c18" firstAttribute="leading" secondItem="Ihr-jM-zyh" secondAttribute="leadingMargin" id="Epr-PS-C1p"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EKY-W9-c18" secondAttribute="trailing" id="tyU-4z-IFK"/>
+                                                <constraint firstItem="EKY-W9-c18" firstAttribute="top" secondItem="Ihr-jM-zyh" secondAttribute="topMargin" id="ztT-Nx-1yk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Em8-aD-GUv" firstAttribute="leading" secondItem="ymX-E8-OFw" secondAttribute="leading" id="51O-Up-wb9"/>
+                            <constraint firstItem="EWQ-zl-egk" firstAttribute="leading" secondItem="ymX-E8-OFw" secondAttribute="leading" id="Auf-PJ-yoI"/>
+                            <constraint firstItem="EWQ-zl-egk" firstAttribute="trailing" secondItem="ymX-E8-OFw" secondAttribute="trailing" id="FsV-xU-Xsh"/>
+                            <constraint firstItem="EWQ-zl-egk" firstAttribute="top" secondItem="Em8-aD-GUv" secondAttribute="bottom" id="L1m-Ec-Fxh"/>
+                            <constraint firstItem="ymX-E8-OFw" firstAttribute="trailing" secondItem="Em8-aD-GUv" secondAttribute="trailing" id="b53-MW-hL2"/>
+                            <constraint firstItem="EWQ-zl-egk" firstAttribute="bottom" secondItem="ymX-E8-OFw" secondAttribute="bottom" id="iWU-C4-kZo"/>
+                            <constraint firstItem="Em8-aD-GUv" firstAttribute="top" secondItem="ymX-E8-OFw" secondAttribute="top" id="k8Z-Ug-2Xx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ymX-E8-OFw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Messages" id="J9T-kd-bCe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSK-GB-fjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384.05797101449281" y="153.34821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="acj-9b-a8y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aah-J9-KXY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="GM3-UP-Fb1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="97.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83149820569999999" green="0.58695864679999998" blue="0.99995809790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito Black" pointSize="37"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dzl-2P-BfP" kind="relationship" relationship="rootViewController" id="XZa-5i-6lv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5b-ph-d1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526.08695652173913" y="152.67857142857142"/>
+        </scene>
+    </scenes>
+</document>
