@@ -112,8 +112,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-01-KJW" customClass="RoundedButton" customModule="ChatApp" customModuleProvider="target">
-                                                    <rect key="frame" x="30" y="8" width="354" height="34"/>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-01-KJW" customClass="RoundedButton" customModule="ChatApp" customModuleProvider="target">
+                                                    <rect key="frame" x="40" y="8" width="334" height="34"/>
                                                     <color key="backgroundColor" red="0.83149820569999999" green="0.58695864679999998" blue="0.99995809790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
                                                     <state key="normal" title="Sign In">
@@ -125,10 +125,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="IGL-01-KJW" secondAttribute="trailing" constant="30" id="1bY-93-yb6"/>
-                                                <constraint firstItem="IGL-01-KJW" firstAttribute="leading" secondItem="OQJ-1k-dER" secondAttribute="leading" constant="30" id="JYt-tY-n1E"/>
-                                                <constraint firstItem="IGL-01-KJW" firstAttribute="top" secondItem="OQJ-1k-dER" secondAttribute="top" constant="8" id="O38-Db-hpW"/>
-                                                <constraint firstAttribute="bottom" secondItem="IGL-01-KJW" secondAttribute="bottom" constant="8" id="cFl-vk-U5c"/>
+                                                <constraint firstAttribute="bottom" secondItem="IGL-01-KJW" secondAttribute="bottom" constant="8" id="6Tr-pt-Stu"/>
+                                                <constraint firstItem="IGL-01-KJW" firstAttribute="leading" secondItem="OQJ-1k-dER" secondAttribute="leading" constant="40" id="Rdy-E6-Mxb"/>
+                                                <constraint firstItem="IGL-01-KJW" firstAttribute="top" secondItem="OQJ-1k-dER" secondAttribute="top" constant="8" id="WTA-Ka-cAL"/>
+                                                <constraint firstAttribute="trailing" secondItem="IGL-01-KJW" secondAttribute="trailing" constant="40" id="wy5-d8-FhJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -373,6 +373,6 @@
         <image name="chattiesIcon" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8bO-Nu-IjF"/>
+        <segue reference="t00-Fz-HGC"/>
     </inferredMetricsTieBreakers>
 </document>
