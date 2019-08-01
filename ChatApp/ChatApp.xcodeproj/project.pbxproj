@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4DBFBE3F1EAF8A396C7351C7 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFD9C3C58EAF58F6433DA27 /* Pods_ChatApp.framework */; };
+		9A00AEEC22F182F300AB8CD8 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00AEEB22F182F300AB8CD8 /* PlaceholderTextView.swift */; };
+		9A00AEEE22F19E5B00AB8CD8 /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00AEED22F19E5B00AB8CD8 /* GrowingTextView.swift */; };
 		9A727F2F22E08EB3005D38E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A727F2E22E08EB3005D38E6 /* AppDelegate.swift */; };
 		9A727F3422E08EB3005D38E6 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A727F3222E08EB3005D38E6 /* Auth.storyboard */; };
 		9A727F3622E08EB5005D38E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A727F3522E08EB5005D38E6 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		7CE94EADC06022B4A5F3AC8D /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9A00AEEB22F182F300AB8CD8 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		9A00AEED22F19E5B00AB8CD8 /* GrowingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingTextView.swift; sourceTree = "<group>"; };
 		9A727F2B22E08EB3005D38E6 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A727F2E22E08EB3005D38E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A727F3322E08EB3005D38E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				9AEFA0BD22E60C3F007F6EBB /* StringExtension.swift */,
+				9A00AEEB22F182F300AB8CD8 /* PlaceholderTextView.swift */,
+				9A00AEED22F19E5B00AB8CD8 /* GrowingTextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,8 +400,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A727F2F22E08EB3005D38E6 /* AppDelegate.swift in Sources */,
+				9A00AEEE22F19E5B00AB8CD8 /* GrowingTextView.swift in Sources */,
 				9AF881F022E4B70D00E1F1EE /* RoundedButton.swift in Sources */,
 				9AEFA0BE22E60C3F007F6EBB /* StringExtension.swift in Sources */,
+				9A00AEEC22F182F300AB8CD8 /* PlaceholderTextView.swift in Sources */,
 				9AF881F122E4B70D00E1F1EE /* SignInVC.swift in Sources */,
 				9A8B178522E860550084E24A /* User.swift in Sources */,
 				9AF881F322E4B70D00E1F1EE /* SignUpVC.swift in Sources */,

@@ -29,7 +29,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U8o-Uz-dn1">
                                         <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3z3-Ec-y0Q">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3z3-Ec-y0Q" customClass="GrowingTextView" customModule="ChatApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Em8-aD-GUv">
-                                <rect key="frame" x="0.0" y="141.5" width="414" height="670.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" rowHeight="133" id="6P7-wL-60e">
@@ -112,21 +112,43 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ymX-E8-OFw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Messages" id="J9T-kd-bCe"/>
+                    <navigationItem key="navigationItem" title="Messages" id="J9T-kd-bCe">
+                        <barButtonItem key="leftBarButtonItem" image="signOutIcon" id="Zzs-Ll-xPQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapSignOutButton:" destination="Dzl-2P-BfP" id="2aS-2m-7sa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chatContainerViewBottomConstraint" destination="iWU-C4-kZo" id="aUq-ox-Bc2"/>
+                        <segue destination="Kty-Ic-oIk" kind="presentation" identifier="segue.Chat.messagesToSignIn" id="m38-Wo-oVa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSK-GB-fjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384.05797101449281" y="153.34821428571428"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="H5r-Ac-8rW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" id="Kty-Ic-oIk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRG-44-KQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="153"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="acj-9b-a8y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aah-J9-KXY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="GM3-UP-Fb1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="97.5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="GM3-UP-Fb1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.83149820569999999" green="0.58695864679999998" blue="0.99995809790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="21"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito Black" pointSize="37"/>
                         </textAttributes>
@@ -141,4 +163,7 @@
             <point key="canvasLocation" x="-526.08695652173913" y="152.67857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="signOutIcon" width="25" height="25"/>
+    </resources>
 </document>
