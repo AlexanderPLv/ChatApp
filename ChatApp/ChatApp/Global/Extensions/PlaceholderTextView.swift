@@ -14,16 +14,16 @@ class PlaceholderTextView: UITextView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupPlaceholder()
+        setupView()
     }
     
-    func setupPlaceholder() {
+    func setupView() {
         delegate = self
         
         placeholderTextView.frame = CGRect(x: 5, y: -6, width: bounds.width, height: bounds.height)
         placeholderTextView.textColor = .lightGray
         placeholderTextView.font = font
-        placeholderTextView.text = "Enter a message"
+        
         
         addSubview(placeholderTextView)
         

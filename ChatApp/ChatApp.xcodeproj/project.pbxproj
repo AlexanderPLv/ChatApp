@@ -17,6 +17,11 @@
 		9A727F4122E0AD25005D38E6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A727F4022E0AD25005D38E6 /* Chat.storyboard */; };
 		9A8B178322E85F070084E24A /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B178222E85F070084E24A /* MessagesVC.swift */; };
 		9A8B178522E860550084E24A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B178422E860550084E24A /* User.swift */; };
+		9AE9AE8422F2E2E50013E7FC /* MessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9AE8322F2E2E50013E7FC /* MessageTextView.swift */; };
+		9AE9AE8722F32F4C0013E7FC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9AE8622F32F4C0013E7FC /* Message.swift */; };
+		9AE9AE8922F332B10013E7FC /* MessageStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9AE8822F332B10013E7FC /* MessageStyleView.swift */; };
+		9AE9AE8B22F333310013E7FC /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9AE8A22F333310013E7FC /* MessageCell.swift */; };
+		9AE9AE8D22F349AE0013E7FC /* MessageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9AE8C22F349AE0013E7FC /* MessageStyle.swift */; };
 		9AEFA0BE22E60C3F007F6EBB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFA0BD22E60C3F007F6EBB /* StringExtension.swift */; };
 		9AF881DB22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881CC22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf */; };
 		9AF881DC22E4B23800E1F1EE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF881CD22E4B23800E1F1EE /* Nunito-ExtraBold.ttf */; };
@@ -53,6 +58,11 @@
 		9A727F4022E0AD25005D38E6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		9A8B178222E85F070084E24A /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
 		9A8B178422E860550084E24A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9AE9AE8322F2E2E50013E7FC /* MessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextView.swift; sourceTree = "<group>"; };
+		9AE9AE8622F32F4C0013E7FC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9AE9AE8822F332B10013E7FC /* MessageStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStyleView.swift; sourceTree = "<group>"; };
+		9AE9AE8A22F333310013E7FC /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		9AE9AE8C22F349AE0013E7FC /* MessageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStyle.swift; sourceTree = "<group>"; };
 		9AEFA0BD22E60C3F007F6EBB /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		9AF881CC22E4B23800E1F1EE /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		9AF881CD22E4B23800E1F1EE /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -125,6 +135,7 @@
 		9A4DD1B622E88ED9005E27B9 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				9AE9AE8522F32EAE0013E7FC /* New Group */,
 				9A4DD1BA22E88FE9005E27B9 /* View */,
 				9A4DD1B922E88FDA005E27B9 /* Controller */,
 			);
@@ -153,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8B178222E85F070084E24A /* MessagesVC.swift */,
+				9AE9AE8A22F333310013E7FC /* MessageCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				9A727F4022E0AD25005D38E6 /* Chat.storyboard */,
+				9AE9AE8322F2E2E50013E7FC /* MessageTextView.swift */,
+				9AE9AE8822F332B10013E7FC /* MessageStyleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +240,15 @@
 				9A4DD1B622E88ED9005E27B9 /* Chat */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		9AE9AE8522F32EAE0013E7FC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AE9AE8622F32F4C0013E7FC /* Message.swift */,
+				9AE9AE8C22F349AE0013E7FC /* MessageStyle.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9AF881CB22E4B23800E1F1EE /* Nunito */ = {
@@ -400,15 +423,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A727F2F22E08EB3005D38E6 /* AppDelegate.swift in Sources */,
+				9AE9AE8D22F349AE0013E7FC /* MessageStyle.swift in Sources */,
 				9A00AEEE22F19E5B00AB8CD8 /* GrowingTextView.swift in Sources */,
+				9AE9AE8922F332B10013E7FC /* MessageStyleView.swift in Sources */,
 				9AF881F022E4B70D00E1F1EE /* RoundedButton.swift in Sources */,
 				9AEFA0BE22E60C3F007F6EBB /* StringExtension.swift in Sources */,
+				9AE9AE8422F2E2E50013E7FC /* MessageTextView.swift in Sources */,
 				9A00AEEC22F182F300AB8CD8 /* PlaceholderTextView.swift in Sources */,
 				9AF881F122E4B70D00E1F1EE /* SignInVC.swift in Sources */,
 				9A8B178522E860550084E24A /* User.swift in Sources */,
 				9AF881F322E4B70D00E1F1EE /* SignUpVC.swift in Sources */,
+				9AE9AE8722F32F4C0013E7FC /* Message.swift in Sources */,
 				9AF881EF22E4B70D00E1F1EE /* AuthTableViewController.swift in Sources */,
 				9A8B178322E85F070084E24A /* MessagesVC.swift in Sources */,
+				9AE9AE8B22F333310013E7FC /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

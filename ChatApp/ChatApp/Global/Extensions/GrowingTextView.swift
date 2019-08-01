@@ -16,6 +16,8 @@ class GrowingTextView: PlaceholderTextView {
     
     weak var growingTextViewDelegate: GrowingTextViewDelegate?
 
+    let maxHeight: CGFloat = 100
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()
@@ -32,8 +34,10 @@ class GrowingTextView: PlaceholderTextView {
         
         let newSize = sizeThatFits(CGSize(width: width, height: .greatestFiniteMagnitude))
         let newHieght = newSize.height
-        growingTextViewDelegate?.growingTextView(self, hieghtDidChangeTo: newHieght)
+        let finalHeight = newHieght > maxHeight ? maxHeight : newHieght
+        isScrollEnabled = newHieght > maxHeight
         
+        growingTextViewDelegate?.growingTextView(self, hieghtDidChangeTo: finalHeight)
     }
 
 }

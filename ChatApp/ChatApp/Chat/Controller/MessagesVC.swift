@@ -10,18 +10,21 @@ import UIKit
 import FirebaseAuth
 class MessagesVC: UIViewController {
     
+    @IBOutlet weak var messageTextView: MessageTextView!
+    @IBOutlet weak var chatContainerViewHieghtConstraint: NSLayoutConstraint!
     @IBOutlet weak var chatContainerViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
     
     var user: User?
-    
+    var messages = [Message(sender: "Alex", body: "Hey whats up"), Message(sender: "Isha", body: "Hey, its okey"), Message(sender: "anonim", body: "Some text here but i dont know what i want write to see everythings gonna right. ")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addObservers()
+        tableView.dataSource = self
         
-        if let user = self.user {
-            print("\(user)")
-        }
+        addObservers()
+        messageTextView.growingTextViewDelegate = self
+       
     }
     
     func addObservers() {
@@ -64,5 +67,33 @@ class MessagesVC: UIViewController {
             print(signOutError)
         }
     }
+    
+}
+
+extension MessagesVC: GrowingTextViewDelegate {
+    func growingTextView(_ growingTextView: GrowingTextView, hieghtDidChangeTo height: CGFloat) {
+        let verticalPadding: CGFloat = 8
+        chatContainerViewHieghtConstraint.constant = height + verticalPadding
+    }
+}
+
+
+extension MessagesVC: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as? MessageCell
+            else { return UITableViewCell() }
+        let message = messages[indexPath.row]
+        let currentUser = message.sender == user?.username
+        
+        cell.populate(with: message, isFromCurrentUser: currentUser)
+        
+        return cell
+    }
+    
     
 }
