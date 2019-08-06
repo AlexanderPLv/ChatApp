@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
+
 class MessagesVC: UIViewController {
     
     @IBOutlet weak var messageTextView: MessageTextView!
@@ -15,16 +17,20 @@ class MessagesVC: UIViewController {
     @IBOutlet weak var chatContainerViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
-    var user: User?
-    var messages = [Message(sender: "Alex", body: "Hey whats up"), Message(sender: "Isha", body: "Hey, its okey"), Message(sender: "anonim", body: "Some text here but i dont know what i want write to see everythings gonna right. ")]
-
+    let database = Firestore.firestore()
+    lazy var messagesCollection = database.collection("messages")
+    
+    var user: User!
+    var messages = [Message]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         
         addObservers()
+        observeMessages()
         messageTextView.growingTextViewDelegate = self
-       
+        
     }
     
     func addObservers() {
@@ -38,6 +44,34 @@ class MessagesVC: UIViewController {
                                                queue: .main,
                                                using: keyboardWillHide)
     }
+    
+    func observeMessages() {
+        
+        messagesCollection.order(by: "creationDate").addSnapshotListener { (snapshot, error) in
+            
+            if let snapshot = snapshot {
+                
+                var messagesFromFirestore = [Message]()
+                
+                for document in snapshot.documents {
+                    let dictionary = document.data()
+                    guard
+                    let sender = dictionary["sender"] as? String,
+                    let body = dictionary["body"] as? String
+                    else { return }
+                    
+                    let message = Message(sender: sender, body: body)
+                    messagesFromFirestore.append(message)
+                }
+                self.messages = messagesFromFirestore
+                self.tableView.reloadData()
+            }
+            
+            
+        }
+        
+    }
+    
     
     func keyboardWillShow (notification: Notification) {
         guard
@@ -58,14 +92,37 @@ class MessagesVC: UIViewController {
         UIView.animate(withDuration: 0.2, animations: view.layoutIfNeeded)
     }
     
+    func sendMessage() {
+        
+        let dataDictionary: [String: Any] = [ "sender": user.username,
+                                              "body"  : messageTextView.text as Any,
+                                              "creationDate": FieldValue.serverTimestamp()]
+        
+        messagesCollection.addDocument(data: dataDictionary) { (error) in
+            if let error = error {
+                print(error)
+            } else {
+                self.messageTextView.text.removeAll()
+                print("complete")
+                
+            }
+        }
+        
+        
+    }
     
     @IBAction func didTapSignOutButton(_ sender: Any) {
         do {
-           try Auth.auth().signOut()
+            try Auth.auth().signOut()
             performSegue(withIdentifier: "segue.Chat.messagesToSignIn", sender: nil)
         } catch let signOutError {
             print(signOutError)
         }
+    }
+    
+    @IBAction func didTapSend(_ sender: Any) {
+        messageTextView.endEditing(true)
+        sendMessage()
     }
     
 }

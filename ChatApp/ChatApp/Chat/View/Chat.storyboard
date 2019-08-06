@@ -44,6 +44,9 @@
                                                 <state key="normal" title="Send">
                                                     <color key="titleColor" red="0.83149820569999999" green="0.58695864679999998" blue="0.99995809790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapSend:" destination="Dzl-2P-BfP" eventType="touchUpInside" id="mFd-tA-EJb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
