@@ -83,7 +83,10 @@ class MessagesVC: UIViewController {
         let keyboardHieght = keyboardFrame.cgRectValue.height
         
         chatContainerViewBottomConstraint.constant = bottomInset - keyboardHieght
-        UIView.animate(withDuration: 0.25, animations: view.layoutIfNeeded)
+        UIView.animate(withDuration: 0.25) {
+            self.view.layoutIfNeeded()
+            self.tableView.scrollToBottom()
+        }
     }
     
     
@@ -121,8 +124,11 @@ class MessagesVC: UIViewController {
     }
     
     @IBAction func didTapSend(_ sender: Any) {
+        guard messageTextView.text.isEmpty != true else { return }
+        
         messageTextView.endEditing(true)
         sendMessage()
+        tableView.scrollToBottom()
     }
     
 }
